@@ -15,6 +15,7 @@ export type User = {
 export type Ticket = {
   id: string;
   user_id: string;
+  user_name: string;
   email: string;
   title: string;
   description: string;

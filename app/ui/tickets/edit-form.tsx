@@ -51,7 +51,7 @@ export default function EditTicketForm({
     <form action={onSubmitFunction}>
       <div className="rounded-md bg-gray-50 p-4 md:p-6">
 
-        <input type="hidden" name="user_id" value={user_id}/>
+        <input type="hidden" name="user_id" value={ticket.user_id}/>
 
         {/* Title */}
         <div className="mb-4">
@@ -100,7 +100,7 @@ export default function EditTicketForm({
                 placeholder="Enter a name"
                 className="peer block w-full rounded-md border border-gray-200 py-2 pl-10 text-sm outline-2 placeholder:text-gray-500"
                 aria-describedby="user-name-error"
-                defaultValue={user_name}
+                defaultValue={ticket.user_name}
                 required
               />
               <UserCircleIcon className="pointer-events-none absolute left-3 top-1/2 h-[18px] w-[18px] -translate-y-1/2 text-gray-500 peer-focus:text-gray-900" />
