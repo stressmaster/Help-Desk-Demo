@@ -34,12 +34,12 @@ export default function NewComment({
         const date = new Date();
         const am_pm = date.getHours() < 12 ? 'AM' : 'PM';
         const hours = date.getHours() % 12 || 12;
-        if (user_name !== ticket.user_id) {
-          console.log('Would normally send email here with body:\n' + ticket.user_id
+        if (user_id !== ticket.user_id) {
+          console.log('Would normally send email here with body:\n' + ticket.user_name
             + ', there was activity on your ticket "' + ticket.title + '" by support staff.\n'
           + user_name + ' left a new comment: "' + textInput.current.value.substring(0,20)
           + (textInput.current.value.length > 20 ?  '...' : '') + '" at ' + hours + ':'
-          + date.getMinutes() + ' ' + am_pm + ' on ' + date.toLocaleString('en-us', {  weekday: 'long' }));
+          + date.getMinutes() + ' ' + am_pm + ' on ' + date.toLocaleString('en-us', {  weekday: 'long' }) + '.');
         }
         textInput.current.value = '';
       }
